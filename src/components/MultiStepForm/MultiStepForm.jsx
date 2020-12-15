@@ -7,7 +7,7 @@ import Contact from "./Contact";
 import Review from "./Review";
 import Submit from "./Submit";
 
-//import "./styles.css";
+import "./styles.css";
 
 const steps = [
   { id: "names" },
@@ -18,18 +18,18 @@ const steps = [
 ];
 
 const defaultData = {
-  firstName: "Jane",
-  lastName: "Doe",
-  nickName: "Jan",
-  address: "200 South Main St",
-  city: "Anytown",
-  state: "CA",
-  zip: "90505",
-  email: "email@domain.com",
-  phone: "+61 4252 454 332"
+  firstName: "",
+  lastName: "",
+  nickName: "",
+  address: "",
+  city: "",
+  state: "",
+  zip: "",
+  email: "",
+  phone: ""
 };
 
-const MultiStepForm = ({ images }) => {
+const MultiStepForm = () => {
   const [formData, setForm] = useForm(defaultData);
   const { step, navigation } = useStep({ initialStep: 0, steps });
   const { id } = step;
